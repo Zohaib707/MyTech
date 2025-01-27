@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTech</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="Logo.png" alt="MyTech Logo"></a>
+        <div class="nav-links" id="navLinks">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+          <ul>
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box1">
+        <h1>Welcome To Product Page</h1>
+        <p>Your one-stop solution for our best deals on these amazing products</p>
+        <a href="service.html" class="hero2-btn">Explore Our Next Page</a>
+      </div>
+    </section>
+    <section class="product-list">
+      <div class="product-item">
+        <img src="Phone.png" alt="Phone">
+        <h3>Smartphone</h3>
+        <p>The latest smartphone with cutting-edge technology and sleek design, ensuring you stay connected and ahead of the curve.</p>
+        <div class="price-block">
+          <p class="price">£280 <span class="previous-price">£390</span></p>
+          <a class="buy-now-btn" href="https://www.paypal.com/ncp/payment/SPMJNLL2X78LS">
+            Buy Now
+          </a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="Monitor.png" alt="Monitor">
+        <h3>Monitor</h3>
+        <p>Experience stunning visuals and smooth performance with our latest monitor, perfect for both work and play, ensuring you stay productive and entertained.</p>
+        <div class="price-block">
+          <p class="price">£250 <span class="previous-price">£330</span></p>
+          <a class="buy-now-btn" href="https://www.paypal.com/ncp/payment/CALQRBWM82AQJ">
+            Buy Now
+          </a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="Ipad.png" alt="Tablet">
+        <h3>Tablet</h3>
+        <p>Discover our latest tablet, a perfect blend of innovation and sleek design. Keep connected and efficient with its powerful performance and vibrant display. Ideal for both work and entertainment, it’s your ultimate companion for every task.</p>
+        <div class="price-block">
+          <p class="price">£220 <span class="previous-price">£300</span></p>
+          <a class="buy-now-btn" href="https://www.paypal.com/ncp/payment/237D5KVQZMTDW">
+            Buy Now
+          </a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="airpods.png" alt="Accessories">
+        <h3>Accessories</h3>
+        <p>Experience crystal-clear sound and seamless connectivity with our latest AirPods. Designed for comfort and style, they keep you immersed in music, calls, and more. Stay ahead with cutting-edge technology and a sleek design.</p>
+        <div class="price-block">
+          <p class="price">£170 <span class="previous-price">£270</span></p>
+          <a class="buy-now-btn" href="https://www.paypal.com/ncp/payment/CGRXXJZG7TMRA">
+            Buy Now
+          </a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="Computer.png" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Explore our latest laptop, equipped with advanced technology and a sleek design. Stay productive and entertained with its powerful performance and high-resolution display. Perfect for both work and play, it keeps you ahead of the curve.</p>
+        <div class="price-block">
+          <p class="price">£700 <span class="previous-price">£1000</span></p>
+          <a class="buy-now-btn" href="https://www.paypal.com/ncp/payment/N7KPF3USAVGYC">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section logo">
+          <img src="Logo.png" alt="MyTech Logo">
+        </div>
+        <div class="footer-section">
+          <p>© 2024 MyTech. All rights reserved.</p>
+        </div>
+        <div class="footer-section">
+          <a href="https://www.paypal.com/donate/?hosted_button_id=M6L6UKY7RY7L4" target="_blank">
+            <i class="fab fa-paypal"></i> PayPal
+          </a><br>
+        </div>
+        <div class="footer-section subscribe">
+          <!-- Subscribe Form -->
+          <form id="subscribeForm" onsubmit="showThankYouPopup(event)">
+            <input type="email" id="subscriberEmail" placeholder="Enter your email" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@mytech.com</p>
+          <p>Phone: +44 12345678</p>
+        </div>
+        <div class="footer-section social-media">
+          <h3>Follow Us</h3>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a><br>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 MyTech. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    <!-- Email Popup Modal -->
+    <div id="emailPopup" class="email-popup">
+      <div class="email-popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Thank You for Subscribing!</h2>
+        <p>We’ll send updates to your email.</p>
+      </div>
+    </div>
+    
+    <script>
+    // Function to show the thank-you popup when the Subscribe button is clicked
+    function showThankYouPopup(event) {
+        event.preventDefault(); // Prevent form submission (page reload)
+    
+        // Get the email entered (you can also process this email if needed)
+        var email = document.getElementById('subscriberEmail').value;
+        console.log("Email entered:", email); // This is for logging, you can send this email to the backend
+    
+        // Show the thank-you popup
+        document.getElementById("emailPopup").style.display = "flex";
+    
+        // Optionally reset the form
+        document.getElementById("subscribeForm").reset();
+    }
+    
+    // Function to close the popup modal
+    function closePopup() {
+        document.getElementById("emailPopup").style.display = "none"; // Hide the popup
+    }
+    
+    // JavaScript for responsive navigation menu (if applicable)
+    var navLinks = document.getElementById("navLinks");
+    
+    function showMenu() {
+      navLinks.style.right = "0"; // Display the menu
+    }
+    
+    function hideMenu() {
+      navLinks.style.right = "-200px"; // Hide the menu
+    }
+    </script>
+    
+    <style>
+    /* Email Popup Modal Styling */
+    .email-popup {
+      display: none; /* Initially hidden */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+    }
+    
+    .email-popup-content {
+      background: linear-gradient(to right, #ff00ee, #6A0DAD, #40E0D0);
+      padding: 30px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .email-popup-content h2 {
+      margin-bottom: 15px;
+    }
+    
+    .email-popup-content .close-btn {
+      font-size: 30px;
+      font-weight: bold;
+      color: #a3129e; /* Customize close button color */
+      cursor: pointer;
+    }
+    
+    .email-popup-content .close-btn:hover {
+      color: #d100a1; /* Change color when hovered */
+    }
+    </style>
+    
+    </body>
+    </html>
+    

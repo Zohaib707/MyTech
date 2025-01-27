@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTech</title>
+    <!-- Custom CSS files link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="Logo.png" alt="MyTech Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+            <ul>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box3">
+        <h1>Welcome To Services Page</h1>
+        <p>This page demonstrates the services we offer to our customers.</p>
+        <br>
+        <a href="about-us.html" class="hero3-btn">Explore Our Next Page</a>
+    </div>
+</section>
+
+<section class="services">
+    <div class="service-item">
+        <img src="test.png" alt="Services">
+    </div>
+    <div class="about-company">
+        <h2>About Us</h2>
+        <p>We are a leading provider of top-notch services aimed at enhancing your everyday experiences. Our team of experts is dedicated to ensuring your satisfaction and delivering exceptional quality in everything we do.</p>
+    </div>
+</section>
+<section class="about-company-bottom">
+    <h2>What We Do</h2>
+    <p>Established in 2024, MyTech has rapidly grown to become a trusted name in the industry. We offer a variety of services including:</p>
+    <ul>
+        <li><i class="fas fa-tools"></i> Repair Services</li>
+        <li><i class="fas fa-box"></i> Supplying Tech Products</li>
+        <li><i class="fas fa-sync"></i> Restocking Supplies</li>
+        <li><i class="fas fa-laptop-code"></i> IT Support</li>
+        <li><i class="fas fa-shipping-fast"></i> Fast Delivery</li>
+    </ul>
+    <h3>Contact Us</h3>
+    <p>Phone: +44 1234 567890<br>
+    Email: contact@mytech.com</p>
+    <h3>Find Us</h3>
+    <p>
+        <a href="https://www.paypal.com" target="_blank"><i class="fab fa-paypal"></i> PayPal</a><br>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a><br>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </p>
+</section>
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section logo">
+      <img src="Logo.png" alt="MyTech Logo">
+    </div>
+    <div class="footer-section">
+      <p>© 2024 MyTech. All rights reserved.</p>
+    </div>
+    <div class="footer-section">
+      <a href="https://www.paypal.com/donate/?hosted_button_id=M6L6UKY7RY7L4" target="_blank">
+        <i class="fab fa-paypal"></i> PayPal
+      </a><br>      
+    </div>
+    <div class="footer-section subscribe">
+      <!-- Subscribe Form -->
+      <form id="subscribeForm" onsubmit="showThankYouPopup(event)">
+        <input type="email" id="subscriberEmail" placeholder="Enter your email" required>
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p>Email: support@mytech.com</p>
+      <p>Phone: +44 12345678</p>
+    </div>
+    <div class="footer-section social-media">
+      <h3>Follow Us</h3>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a><br>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>    
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 MyTech. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Thank You Popup Modal -->
+<div id="emailPopup" class="email-popup">
+  <div class="email-popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Thank You for Subscribing!</h2>
+    <p>We’ll send updates to your email.</p>
+  </div>
+</div>
+
+<script>
+// Function to show the thank-you popup when the Subscribe button is clicked
+function showThankYouPopup(event) {
+    event.preventDefault(); // Prevent form submission (page reload)
+    
+    // Show the thank-you popup
+    document.getElementById("emailPopup").style.display = "flex"; 
+
+    // Optionally, reset the form (remove the email input)
+    document.getElementById("subscribeForm").reset();
+}
+
+// Function to close the popup modal
+function closePopup() {
+    document.getElementById("emailPopup").style.display = "none"; // Hide the popup
+}
+</script>
+
+<style>
+/* Email Popup Modal Styling */
+.email-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.email-popup-content {
+  background: linear-gradient(to right, #ff00ee, #6A0DAD, #40E0D0);
+  padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email-popup-content h2 {
+    margin-bottom: 15px;
+}
+
+.email-popup-content .close-btn {
+    font-size: 30px;
+    font-weight: bold;
+    color: #a3129e; /* Customize close button color */
+    cursor: pointer;
+}
+
+.email-popup-content .close-btn:hover {
+    color: #d100a1; /* Change color when hovered */
+}
+</style>
+
+</body>
+</html>
